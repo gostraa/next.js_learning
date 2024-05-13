@@ -3,6 +3,7 @@ import React from "react";
 import StatusLabel, { Status } from "./components/statusLabel";
 import ActiveLabel from "./components/ActiveLabel";
 import InActiveLabel from "./components/InActiveLabel";
+import AddCompanyButton from "./components/AddCompanyButton";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <ActiveLabel>Active</ActiveLabel>
       <InActiveLabel>Not active</InActiveLabel>
       <StatusLabel status={Status.Active}>Status</StatusLabel>
+      <AddCompanyButton />
     </main>
   );
 }
