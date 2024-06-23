@@ -1,5 +1,9 @@
 import React from "react";
-import "./globals.css";
+import "./globals.scss";
+import { Golos_Text } from "next/font/google";
+import Navbar from "@/components/ui/navbar/Navbar";
+import Hero from "@/components/ui/hero/Hero";
+const font = Golos_Text({ subsets: ["latin"] });
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -7,7 +11,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={font.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,18 +1,16 @@
+import Hero from "@/components/ui/hero/Hero";
+import type { Metadata } from "next";
+
 import React from "react";
 
-import StatusLabel, { Status } from "./components/statusLabel";
-import ActiveLabel from "./components/ActiveLabel";
-import InActiveLabel from "./components/InActiveLabel";
-import AddCompanyButton from "./components/AddCompanyButton";
-
+export const metadata: Metadata = {
+  title: "Home page",
+  description: "Home page description",
+};
 export default function Home() {
   return (
-    <main>
-      <h1 className={""}>Home Page</h1>
-      <ActiveLabel>Active</ActiveLabel>
-      <InActiveLabel>Not active</InActiveLabel>
-      <StatusLabel status={Status.Active}>Status</StatusLabel>
-      <AddCompanyButton />
-    </main>
+    <div className="bg-white pb-6 sm:pb-8 lg:pb-12 ">
+      <Hero />
+    </div>
   );
 }

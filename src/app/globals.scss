@@ -8,6 +8,7 @@
   margin: 0;
 }
 
+html,
 body {
-  background-color: #fafafa;
+  @apply text-black bg-white text-base;
 }
