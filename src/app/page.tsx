@@ -19,7 +19,7 @@ export default async function Home() {
   const data = await getProducts();
   return (
     <Transition>
-      <div className="bg-white pb-6 sm:pb-8 lg:pb-12 ">
+      <div className="bg-white pb-6  sm:pb-8 lg:pb-12 ">
         <Hero />
         <Catalog products={data} isFull={false} />
       </div>
