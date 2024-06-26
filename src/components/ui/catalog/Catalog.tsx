@@ -32,7 +32,9 @@ const Catalog: FC<ICatalog> = ({ products, isFull = true }: ICatalog) => {
         </div>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 ml:gap-x-8">
           {latestProducts?.map((product) => (
-            <ProductItem key={product._id} product={product} />
+            <Link key={product._id} href={`/product/${product.slug}`}>
+              <ProductItem product={product} />
+            </Link>
           ))}
         </div>
       </div>
